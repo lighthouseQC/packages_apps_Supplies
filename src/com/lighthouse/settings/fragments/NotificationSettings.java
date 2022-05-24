@@ -38,7 +38,6 @@ import androidx.preference.PreferenceViewHolder;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
-import com.android.internal.util.lighthouse.LighthouseUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -69,9 +68,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         final Resources res = mContext.getResources();
 
         PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
-        if (!LighthouseUtils.isVoiceCapable(getActivity())) {
-                prefSet.removePreference(incallVibCategory);
-        }
     }
 
     @Override

@@ -19,7 +19,7 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/lockscreen_title">
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="udfps_category"
         android:title="@string/udfps_category">
 
@@ -29,17 +29,17 @@
             android:summary="@string/udfps_settings_summary"
             android:fragment="com.lighthouse.settings.fragments.UdfpsSettings" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
     <PreferenceCategory
         android:key="lockscreen_general_category"
         android:title="@string/general_category">
 
-    <com.lighthouse.settings.preference.SystemSettingSwitchPreference
+    <!-- <com.lighthouse.settings.preference.SystemSettingSwitchPreference
         android:key="enable_ripple_effect"
         android:title="@string/enable_fingerprint_ripple_effect_title"
         android:summary="@string/enable_fingerprint_ripple_effect_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true" /> -->
         
         <com.lighthouse.settings.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
@@ -54,7 +54,7 @@
         android:defaultValue="true" />
         
     </PreferenceCategory>
-
+<!-- 
     <PreferenceCategory
         android:key="lockscreen_media_art_options"
         android:title="@string/lockscreen_media_art_options_title" >
@@ -74,9 +74,9 @@
             android:defaultValue="25"
             settings:units="dp"/>
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
-    <PreferenceCategory
+    <!-- <PreferenceCategory
         android:key="lockscreen_fingerprint_category"
         android:title="@string/fingerprint_category">
 
@@ -92,6 +92,6 @@
         android:summary="@string/udfps_haptic_feedback_summary"
         android:defaultValue="true" />
 
-    </PreferenceCategory>
+    </PreferenceCategory> -->
 
 </PreferenceScreen>

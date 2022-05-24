@@ -29,9 +29,6 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.content.Context;
 import android.provider.Settings;
-import com.android.internal.util.lighthouse.udfps.UdfpsUtils;
-
-import com.android.internal.util.lighthouse.udfps.UdfpsUtils;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -44,8 +41,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
 
     private static final String FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
-    private static final String UDFPS_CATEGORY = "udfps_category";
-
 
     private FingerprintManager mFingerprintManager;
     private SystemSettingSwitchPreference mFingerprintSuccessVib;
@@ -94,12 +89,6 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
         } else {
             prefSet.removePreference(fpCategory);
         }
-    
-        mUdfpsCategory = findPreference(UDFPS_CATEGORY);
-        if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
-            prefSet.removePreference(mUdfpsCategory);
-        }
-
     }
 
     @Override
@@ -121,13 +110,9 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object objValue) {
         if (preference == mFingerprintSuccessVib) {
             boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.FP_SUCCESS_VIBRATE, value ? 1 : 0);
             return true;
         } else if (preference == mFingerprintErrorVib) {
             boolean value = (Boolean) objValue;
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.FP_ERROR_VIBRATE, value ? 1 : 0);
             return true;
         }
         return false;

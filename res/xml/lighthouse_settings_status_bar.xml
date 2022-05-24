@@ -41,11 +41,11 @@
         android:fragment="com.lighthouse.settings.fragments.ClockDateSettings"
         android:title="@string/status_bar_clock_title" />  -->
 
-    <Preference
+    <!-- <Preference
         android:key="traffic"
         android:fragment="com.lighthouse.settings.fragments.Traffic"
         android:title="@string/traffic_title"
-        android:summary="@string/traffic_summary" />
+        android:summary="@string/traffic_summary" /> -->
 
     </PreferenceCategory>
 
@@ -65,7 +65,7 @@
             android:summary="@string/use_old_mobiletype_summary"
             android:defaultValue="false" />
 
-       <com.lighthouse.settings.preference.SystemSettingSwitchPreference
+       <!-- <com.lighthouse.settings.preference.SystemSettingSwitchPreference
             android:key="show_volte_icon"
             android:title="@string/show_volte_title"
             android:summary="@string/show_volte_summary"
@@ -75,7 +75,7 @@
             android:key="show_vowifi_icon"
             android:title="@string/vowifi_icon_title"
             android:summary="@string/vowifi_icon_summary"
-            android:defaultValue="true" />
+            android:defaultValue="true" /> -->
 
        <com.lighthouse.settings.preference.SecureSettingSwitchPreference
             android:key="show_combined_status_bar_signal_icons"
