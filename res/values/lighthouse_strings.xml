@@ -38,4 +38,9 @@
     <!-- Old mobile type icons -->
     <string name="old_mobiletype_title">Small mobile icon</string>
     <string name="old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
 </resources>
