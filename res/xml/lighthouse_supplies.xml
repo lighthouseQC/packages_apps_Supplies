@@ -39,12 +39,12 @@
             android:fragment="com.lighthouse.supplies.fragments.PowerMenuSettings"
             android:icon="@drawable/ic_settings_powermenu"/>
 
-        <!-- Notifications -->
+        <!-- Notifications 
         <PreferenceScreen
             android:key="notifications_category"
             android:title="@string/notifications_title"
             android:fragment="com.lighthouse.supplies.fragments.NotificationSettings"
-            android:icon="@drawable/ic_settings_notifications"/>
+            android:icon="@drawable/ic_settings_notifications"/> -->
 
         <!-- Misc -->
         <PreferenceScreen
